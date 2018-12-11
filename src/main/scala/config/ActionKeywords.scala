@@ -7,11 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver
 
 object ActionKeywords {
 
+  System.setProperty("webdriver.chrome.driver", "/Users/ngoulongkam/Documents/workspace/chromedriver")
   implicit val driver: WebDriver = new ChromeDriver()
-
-  def openBrowser(): Unit = {
-    new ChromeDriver()
-  }
 
   def navigate(): Unit = {
     driver.manage.timeouts.implicitlyWait(10, TimeUnit.SECONDS)
